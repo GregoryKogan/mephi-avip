@@ -32,7 +32,7 @@ func processPixelNiblack(src, dest *image.Gray, k float64, winSize, x, y int) {
 	s := getStandardDeviation(src, winSize, x, y, m)
 	threshold := m + k*s
 
-	value := ToHSL(src.At(x, y)).L
+	value := float64(src.GrayAt(x, y).Y)
 	if value > threshold {
 		dest.SetGray(x, y, color.Gray{255})
 	} else {
@@ -50,7 +50,7 @@ func getAverage(img *image.Gray, winSize, x, y int) float64 {
 	n := 0
 	for xi := sx; xi <= ex; xi++ {
 		for yi := sy; yi <= ey; yi++ {
-			sum += ToHSL(img.At(xi, yi)).L
+			sum += float64(img.GrayAt(xi, yi).Y)
 			n++
 		}
 	}
@@ -67,7 +67,7 @@ func getStandardDeviation(img *image.Gray, winSize, x, y int, avg float64) float
 	n := 0
 	for xi := sx; xi <= ex; xi++ {
 		for yi := sy; yi <= ey; yi++ {
-			sqSum += math.Pow(ToHSL(img.At(xi, yi)).L-avg, 2.0)
+			sqSum += math.Pow(float64(img.GrayAt(xi, yi).Y)-avg, 2.0)
 			n++
 		}
 	}
