@@ -87,7 +87,7 @@ func GetLightness(img image.Image) image.Image {
 
 func InvertColors(img image.Image) image.Image {
 	bounds := img.Bounds()
-	output := image.NewGray(bounds)
+	output := image.NewRGBA(bounds)
 
 	var wg sync.WaitGroup
 	wg.Add(bounds.Dx() * bounds.Dy())
