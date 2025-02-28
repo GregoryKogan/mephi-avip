@@ -4,11 +4,6 @@ import (
 	"github.com/GregoryKogan/mephi-av-processing/pkg/imgproc"
 )
 
-type Ratio struct {
-	M int
-	N int
-}
-
 func main() {
 	img, _ := imgproc.OpenPNG("assets/khachapuri.png")
 
