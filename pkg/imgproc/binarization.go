@@ -27,7 +27,7 @@ func GetNiblackThresholding(img *image.Gray, winSize int, k float64) *image.Gray
 	return output
 }
 
-func processPixelNiblack(src *image.Gray, dest *image.Gray, k float64, winSize, x, y int) {
+func processPixelNiblack(src, dest *image.Gray, k float64, winSize, x, y int) {
 	m := getAverage(src, winSize, x, y)
 	s := getStandardDeviation(src, winSize, x, y, m)
 	threshold := m + k*s
