@@ -65,7 +65,7 @@ func GetColorComponents(img image.Image) (image.Image, image.Image, image.Image)
 	return rImg, gImg, bImg
 }
 
-func GetLightness(img image.Image) image.Image {
+func GetLightness(img image.Image) *image.Gray {
 	bounds := img.Bounds()
 	output := image.NewGray(bounds)
 
