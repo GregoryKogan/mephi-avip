@@ -85,6 +85,27 @@ func GetLightness(img image.Image) *image.Gray {
 	return output
 }
 
+func GetHalfTone(img image.Image) *image.Gray {
+	bounds := img.Bounds()
+	output := image.NewGray(bounds)
+
+	var wg sync.WaitGroup
+	wg.Add(bounds.Dx() * bounds.Dy())
+	for x := range bounds.Max.X {
+		for y := range bounds.Max.Y {
+			go func() {
+				defer wg.Done()
+				r, g, b := ToNormalized(img.At(x, y))
+				ht := 0.3*r + 0.59*g + 0.11*b
+				output.SetGray(x, y, color.Gray{uint8(ht * 255.0)})
+			}()
+		}
+	}
+
+	wg.Wait()
+	return output
+}
+
 func InvertColors(img image.Image) image.Image {
 	bounds := img.Bounds()
 	output := image.NewRGBA(bounds)
