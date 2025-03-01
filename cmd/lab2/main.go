@@ -23,7 +23,7 @@ func main() {
 
 		// 2. Приведение полутонового изображения к монохромному
 		// методом пороговой обработки
-		bin := imgproc.GetNiblackThresholding(halfTone, 15, 0.2)
+		bin := imgproc.GetNiblackThresholding(halfTone, 25, 0.6)
 		imgproc.SavePNG(bin, "output/lab2/2-"+file)
 	}
 }
