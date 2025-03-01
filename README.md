@@ -58,11 +58,6 @@
     <img src="output/lab2/2-khachapuri.png"  width="32%"/>
 </p>
 <p>
-    <img src="assets/fingerprint.png" width="32%"/>
-    <img src="output/lab2/1-fingerprint.png" width="32%"/>
-    <img src="output/lab2/2-fingerprint.png"  width="32%"/>
-</p>
-<p>
     <img src="assets/map.png" width="32%"/>
     <img src="output/lab2/1-map.png" width="32%"/>
     <img src="output/lab2/2-map.png"  width="32%"/>
@@ -88,32 +83,32 @@
     <img src="output/lab3/difference-salt-pepper-noise.png" width="32%"/>
 </p>
 <p>
-    <img src="output/lab3/original-bin-cartoon.png" width="32%"/>
-    <img src="output/lab3/filtered-bin-cartoon.png" width="32%"/>
-    <img src="output/lab3/difference-bin-cartoon.png" width="32%"/>
+    <img src="output/lab3/original-2-cartoon.png" width="32%"/>
+    <img src="output/lab3/filtered-2-cartoon.png" width="32%"/>
+    <img src="output/lab3/difference-2-cartoon.png" width="32%"/>
 </p>
 <p>
-    <img src="output/lab3/original-bin-fingerprint.png" width="32%"/>
-    <img src="output/lab3/filtered-bin-fingerprint.png" width="32%"/>
-    <img src="output/lab3/difference-bin-fingerprint.png" width="32%"/>
+    <img src="output/lab3/original-2-fingerprint.png" width="32%"/>
+    <img src="output/lab3/filtered-2-fingerprint.png" width="32%"/>
+    <img src="output/lab3/difference-2-fingerprint.png" width="32%"/>
 </p>
 <p>
-    <img src="output/lab3/original-bin-khachapuri.png" width="32%"/>
-    <img src="output/lab3/filtered-bin-khachapuri.png" width="32%"/>
-    <img src="output/lab3/difference-bin-khachapuri.png" width="32%"/>
+    <img src="output/lab3/original-2-khachapuri.png" width="32%"/>
+    <img src="output/lab3/filtered-2-khachapuri.png" width="32%"/>
+    <img src="output/lab3/difference-2-khachapuri.png" width="32%"/>
 </p>
 <p>
-    <img src="output/lab3/original-bin-map.png" width="32%"/>
-    <img src="output/lab3/filtered-bin-map.png" width="32%"/>
-    <img src="output/lab3/difference-bin-map.png" width="32%"/>
+    <img src="output/lab3/original-2-map.png" width="32%"/>
+    <img src="output/lab3/filtered-2-map.png" width="32%"/>
+    <img src="output/lab3/difference-2-map.png" width="32%"/>
 </p>
 <p>
-    <img src="output/lab3/original-bin-page.png" width="32%"/>
-    <img src="output/lab3/filtered-bin-page.png" width="32%"/>
-    <img src="output/lab3/difference-bin-page.png" width="32%"/>
+    <img src="output/lab3/original-2-page.png" width="32%"/>
+    <img src="output/lab3/filtered-2-page.png" width="32%"/>
+    <img src="output/lab3/difference-2-page.png" width="32%"/>
 </p>
 <p>
-    <img src="output/lab3/original-bin-xray.png" width="32%"/>
-    <img src="output/lab3/filtered-bin-xray.png" width="32%"/>
-    <img src="output/lab3/difference-bin-xray.png" width="32%"/>
+    <img src="output/lab3/original-2-xray.png" width="32%"/>
+    <img src="output/lab3/filtered-2-xray.png" width="32%"/>
+    <img src="output/lab3/difference-2-xray.png" width="32%"/>
 </p>
