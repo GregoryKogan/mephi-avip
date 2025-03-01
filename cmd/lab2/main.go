@@ -18,7 +18,7 @@ func main() {
 		img, _ := imgproc.OpenPNG("assets/" + file)
 
 		// 1. Приведение полноцветного изображения к полутоновому.
-		halfTone := imgproc.GetLightness(img)
+		halfTone := imgproc.GetHalfTone(img)
 		imgproc.SavePNG(halfTone, "output/lab2/1-"+file)
 
 		// 2. Приведение полутонового изображения к монохромному
