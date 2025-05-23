@@ -112,3 +112,21 @@
     <img src="output/lab3/filtered-2-xray.png" width="32%"/>
     <img src="output/lab3/difference-2-xray.png" width="32%"/>
 </p>
+
+## Лабораторная работа №4. Выделение контуров на изображении
+
+Вариант: Оператор Шарра 3 × 3, G=|Gx|+|Gy|
+
+<p>
+    <img src="output/lab4/Gx-cartoon.png" width="49%"/>
+    <img src="output/lab4/Gy-cartoon.png" width="49%"/>
+    <img src="output/lab4/G-cartoon.png" width="49%"/>
+    <img src="output/lab4/Bin-cartoon.png" width="49%"/>
+</p>
+
+<p>
+    <img src="output/lab4/Gx-page.png" width="49%"/>
+    <img src="output/lab4/Gy-page.png" width="49%"/>
+    <img src="output/lab4/G-page.png" width="49%"/>
+    <img src="output/lab4/Bin-page.png" width="49%"/>
+</p>
