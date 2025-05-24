@@ -307,22 +307,36 @@
 ### Спектрограмма оригинального сигнала
 
 <p align="center">
-    <img src="output/lab9/spectrogram_original.png" style="max-height: 50vh; width="98%"/>
+    <img src="output/lab9/original_spectrogram.png" style="max-height: 50vh; width="98%"/>
 </p>
 
 ### Спектрограмма после вычитания шума
 
+#### Метод Винера
+
 <p align="center">
-    <img src="output/lab9/spectrogram_denoised.png" style="max-height: 50vh; width="98%"/>
+    <img src="output/lab9/denoised_wiener_spectrogram.png" style="max-height: 50vh; width="98%"/>
 </p>
 
-[Аудио без шума.wav](output/lab9/instrument_denoised.wav)
+#### Фильтр Савицкого-Голея
 
-### Наибольшая энергия
+<p align="center">
+    <img src="output/lab9/denoised_savgol_spectrogram.png" style="max-height: 50vh; width="98%"/>
+</p>
 
-Наибольшая энергия обнаружена в окрестности:  
-  -> Время: 13.70 с  
-  -> Частота: 679.69 Гц  
+#### Фильтр низких частот
+
+<p align="center">
+    <img src="output/lab9/denoised_lowpass_spectrogram.png" style="max-height: 50vh; width="98%"/>
+</p>
+
+[Аудио без шума.wav](output/lab9/restored.wav)
+
+### Энергетические пики
+
+<p align="center">
+    <img src="output/lab9/energy_peaks.png" style="max-height: 50vh; width="98%"/>
+</p>
 
 ## Лабораторная работа №10. Обработка голоса
 
