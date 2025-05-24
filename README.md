@@ -251,3 +251,51 @@
 <p align="center" style="font-size: 5em;">𐒏 𐒗𐒆𐒆𐒔 𐒀𐒆𐒜</p>
 
 4 ошибки, 50% символов распознаны верно
+
+## Лабораторная работа №8. Текстурный анализ и контрастирование
+
+### Текстура 1
+
+Оригинал, полутон и контрастированный полутон
+<p align="center">
+    <img src="assets/texture-1.png" width="32%"/>
+    <img src="output/lab8/halftone-texture-1.png" width="32%"/>
+    <img src="output/lab8/lightness-texture-1.png" width="32%"/>
+</p>
+Гистограммы яркости исходного и контрастированного изображений
+<p align="center">
+    <img src="output/lab8/histogram-halftone-texture-1.png" width="49%"/>
+    <img src="output/lab8/histogram-lightness-texture-1.png" width="49%"/>
+</p>
+Матрицы для исходного и контрастированного изображений
+<p align="center">
+    <img src="output/lab8/histogram-hog-halftone-texture-1.png" width="49%"/>
+    <img src="output/lab8/histogram-hog-lightness-texture-1.png" width="49%"/>
+</p>
+<p align="center">
+    <img src="output/lab8/histogram-hog-halftone-norm-texture-1.png" width="49%"/>
+    <img src="output/lab8/histogram-hog-lightness-norm-texture-1.png" width="49%"/>
+</p>
+
+### Текстура 2
+
+Оригинал, полутон и контрастированный полутон
+<p align="center">
+    <img src="assets/texture-2.png" width="32%"/>
+    <img src="output/lab8/halftone-texture-2.png" width="32%"/>
+    <img src="output/lab8/lightness-texture-2.png" width="32%"/>
+</p>
+Гистограммы яркости исходного и контрастированного изображений
+<p align="center">
+    <img src="output/lab8/histogram-halftone-texture-2.png" width="49%"/>
+    <img src="output/lab8/histogram-lightness-texture-2.png" width="49%"/>
+</p>
+Матрицы для исходного и контрастированного изображений
+<p align="center">
+    <img src="output/lab8/histogram-hog-halftone-texture-2.png" width="49%"/>
+    <img src="output/lab8/histogram-hog-lightness-texture-2.png" width="49%"/>
+</p>
+<p align="center">
+    <img src="output/lab8/histogram-hog-halftone-norm-texture-2.png" width="49%"/>
+    <img src="output/lab8/histogram-hog-lightness-norm-texture-2.png" width="49%"/>
+</p>
