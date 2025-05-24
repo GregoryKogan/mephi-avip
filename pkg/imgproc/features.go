@@ -1,0 +1,104 @@
+package imgproc
+
+import (
+	"image"
+	"math"
+)
+
+func QuartersBlackWeight(img *image.Gray) (float64, float64, float64, float64) {
+	bounds := img.Bounds()
+	q1 := BlackWeight(img, image.Rect(0, 0, bounds.Dx()/2, bounds.Dy()/2))
+	q2 := BlackWeight(img, image.Rect(bounds.Dx()/2, 0, bounds.Dx(), bounds.Dy()/2))
+	q3 := BlackWeight(img, image.Rect(0, bounds.Dy()/2, bounds.Dx()/2, bounds.Dy()))
+	q4 := BlackWeight(img, image.Rect(bounds.Dx()/2, bounds.Dy()/2, bounds.Dx(), bounds.Dy()))
+	return q1, q2, q3, q4
+}
+
+func QuartersRelativeBlackWeight(img *image.Gray) (float64, float64, float64, float64) {
+	bounds := img.Bounds()
+	area := float64(bounds.Dx() / 2 * bounds.Dy() / 2)
+	q1, q2, q3, q4 := QuartersBlackWeight(img)
+	return q1 / area, q2 / area, q3 / area, q4 / area
+}
+
+func BlackWeight(img *image.Gray, bounds image.Rectangle) float64 {
+	sum := 0.0
+	for x := range bounds.Max.X {
+		for y := range bounds.Max.Y {
+			sum += float64(img.GrayAt(x, y).Y) / 255.0
+		}
+	}
+	return sum
+}
+
+func CenterOfMass(img *image.Gray) (float64, float64) {
+	bounds := img.Bounds()
+
+	xSum, ySum := 0.0, 0.0
+	for x := range bounds.Max.X {
+		for y := range bounds.Max.Y {
+			f := float64(img.GrayAt(x, y).Y) / 255.0
+			xSum += float64(x) * f
+			ySum += float64(y) * f
+		}
+	}
+	weight := BlackWeight(img, bounds)
+	return xSum / weight, ySum / weight
+}
+
+func RelativeCenterOfMass(img *image.Gray) (float64, float64) {
+	bounds := img.Bounds()
+	cX, cY := CenterOfMass(img)
+	return (cX - 1.0) / (float64(bounds.Dx()) - 1.0), (cY - 1.0) / (float64(bounds.Dy()) - 1.0)
+}
+
+func Inertia(img *image.Gray) (float64, float64) {
+	Ix, Iy := 0.0, 0.0
+	cX, cY := CenterOfMass(img)
+
+	bounds := img.Bounds()
+	for x := range bounds.Max.X {
+		for y := range bounds.Max.Y {
+			f := float64(img.GrayAt(x, y).Y) / 255.0
+			Ix += math.Pow(float64(y)-cY, 2.0) * f
+			Iy += math.Pow(float64(x)-cX, 2.0) * f
+		}
+	}
+
+	return Ix, Iy
+}
+
+func RelativeInertia(img *image.Gray) (float64, float64) {
+	Ix, Iy := Inertia(img)
+	bounds := img.Bounds()
+	denominator := float64(bounds.Dx() * bounds.Dx() * bounds.Dy() * bounds.Dy())
+	return Ix / denominator, Iy / denominator
+}
+
+func HorizontalProfile(img *image.Gray) []float64 {
+	bounds := img.Bounds()
+	lines := make([]float64, 0, bounds.Dy())
+	for y := range bounds.Max.Y {
+		lineSum := 0.0
+		for x := range bounds.Max.X {
+			lineSum += float64(img.GrayAt(x, y).Y) / 255.0
+		}
+		lines = append(lines, lineSum)
+	}
+
+	return lines
+}
+
+func VerticalProfile(img *image.Gray) []float64 {
+	bounds := img.Bounds()
+	columns := make([]float64, 0, bounds.Dx())
+	for x := range bounds.Max.X {
+		columnSum := 0.0
+		for y := range bounds.Max.Y {
+			columnSum += float64(img.GrayAt(x, y).Y) / 255.0
+		}
+		columns = append(columns, columnSum)
+	}
+
+	return columns
+}

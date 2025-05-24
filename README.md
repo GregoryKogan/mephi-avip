@@ -130,3 +130,25 @@
     <img src="output/lab4/G-page.png" width="49%"/>
     <img src="output/lab4/Bin-page.png" width="49%"/>
 </p>
+
+## Лабораторная работа №5. Выделение признаков символов
+
+Вариант: Османья
+
+Признаки: [features.csv](output/lab5/features.csv)
+
+<p align="center">
+    <img src="assets/osmanya/KAAF.png" width="32%"/><br />
+    <img src="output/lab5/horKAAF.png" width="49%"/>
+    <img src="output/lab5/verKAAF.png" width="49%"/>
+</p>
+<p align="center">
+    <img src="assets/osmanya/O.png" width="32%"/><br />
+    <img src="output/lab5/horO.png" width="49%"/>
+    <img src="output/lab5/verO.png" width="49%"/>
+</p>
+<p align="center">
+    <img src="assets/osmanya/DEEL.png" width="32%"/><br />
+    <img src="output/lab5/horDEEL.png" width="49%"/>
+    <img src="output/lab5/verDEEL.png" width="49%"/>
+</p>
