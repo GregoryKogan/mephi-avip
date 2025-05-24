@@ -43,6 +43,17 @@ def save_spectrogram(S, freqs, times, out_path, title):
     plt.close()
 
 
+def reduce_noise_waveform(y, method="wiener"):
+    if method == "wiener":
+        return signal.wiener(y)
+    elif method == "savgol":
+        return signal.savgol_filter(y, window_length=101, polyorder=2)
+    elif method == "lowpass":
+        return uniform_filter1d(y, size=101)
+    else:
+        return y
+
+
 def reduce_noise(S, method="wiener"):
     if method == "wiener":
         return signal.wiener(S)
@@ -74,7 +85,7 @@ def plot_energy_peaks(peaks, out_path):
     sc = plt.scatter(times, freqs, c=energies, cmap="hot", s=50)
     plt.colorbar(sc, label="Energy")
     plt.xlabel("Time (s)")
-    plt.ylabel("Frequency (Hz)")
+    plt.ylabel("Frequency (Hz")
     plt.title("Energy Peaks Over Time")
     plt.tight_layout()
     plt.savefig(out_path)
@@ -96,19 +107,27 @@ if __name__ == "__main__":
     )
 
     for method in ["wiener", "savgol", "lowpass"]:
-        S_denoised = reduce_noise(S, method=method)
+        y_denoised = reduce_noise_waveform(y, method=method)
+        S_denoised, _, _ = compute_spectrogram(y_denoised, sr)
         save_spectrogram(
             S_denoised,
             freqs,
             times,
             f"output/lab9/denoised_{method}_spectrogram.png",
-            "Denoised Spectrogram",
+            f"Denoised Spectrogram ({method})",
         )
 
-    S_denoised = reduce_noise(S, method="wiener")
-    phase = np.angle(librosa.stft(y, n_fft=N_FFT, hop_length=HOP_LENGTH, window=WINDOW))
+    y_denoised = reduce_noise_waveform(y, method="wiener")
+    S_denoised, _, _ = compute_spectrogram(y_denoised, sr)
+    phase = np.angle(
+        librosa.stft(y_denoised, n_fft=N_FFT, hop_length=HOP_LENGTH, window=WINDOW)
+    )
     y_restored = restore_audio(S_denoised, phase)
     sf.write("output/lab9/restored.wav", y_restored, sr)
 
     peaks = find_energy_peaks(S, freqs, times, sr)
     plot_energy_peaks(peaks, "output/lab9/energy_peaks.png")
+
+    # Also log spectrogram difference for verification
+    diff = np.mean(np.abs(S - S_denoised))
+    print(f"Mean spectrogram difference after noise reduction: {diff:.4f}")
