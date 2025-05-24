@@ -20,6 +20,7 @@ type Features struct {
 }
 
 func main() {
+	os.Remove("output/lab7/guess.txt")
 	file, _ := os.Create("output/lab7/guess.txt")
 	out := bufio.NewWriter(file)
 	defer out.Flush()
@@ -80,7 +81,7 @@ func GetFeatures(path string) []Features {
 }
 
 func saveRecognizedLetters() {
-	raw, _ := imgproc.OpenPNG("assets/iloveyou.png")
+	raw, _ := imgproc.OpenPNG("assets/iloveyou3.png")
 	img := imgproc.GetThresholding(imgproc.GetHalfTone(imgproc.InvertColors(raw)), 100)
 	rectangles := imgproc.SegmentLetters(img)
 	originalColors := imgproc.InvertColors(img)
@@ -128,3 +129,6 @@ func GetUnicode(name string) rune {
 	}
 	return dict[name]
 }
+
+// 𐒖 𐒛 𐒀 𐒁 𐒋 𐒆 𐒊 𐒗 𐒜 𐒍 𐒌 𐒔 𐒘 𐒃 𐒏 𐒅 𐒐 𐒑 𐒒 𐒙 𐒝 𐒎 𐒇 𐒈 𐒉 𐒂 𐒚 𐒓 𐒄
+// 𐒆𐒖𐒕𐒐 𐒄𐒆𐒜𐒖𐒕𐒜
