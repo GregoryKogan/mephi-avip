@@ -28,7 +28,7 @@ def compute_spectrogram(y, sr, n_fft=N_FFT, hop_length=HOP_LENGTH, window=WINDOW
     return S, freqs, times
 
 
-def save_spectrogram(S, freqs, times, out_png):
+def save_spectrogram(S, freqs, times, out_png, formants=None):
     plt.figure(figsize=(10, 6))
     librosa.display.specshow(
         librosa.amplitude_to_db(S, ref=np.max),
@@ -40,6 +40,12 @@ def save_spectrogram(S, freqs, times, out_png):
     )
     plt.colorbar(format="%+2.0f dB")
     plt.title("Spectrogram (log-frequency)")
+    if formants is not None:
+        for f in formants:
+            plt.axhline(
+                f, color="red", linestyle="--", linewidth=3, label=f"{f:.1f} Hz"
+            )
+        plt.legend(loc="upper right")
     plt.tight_layout()
     plt.savefig(out_png)
     plt.close()
@@ -98,7 +104,6 @@ if __name__ == "__main__":
         print(f"Processing {label} from {path}")
         y, sr = load_audio(path)
         S, freqs, times = compute_spectrogram(y, sr)
-        save_spectrogram(S, freqs, times, f"output/lab10/spec_{label}.png")
 
         f_min, f_max = find_freq_range(S, freqs)
         print(f"{label}: min freq = {f_min:.1f} Hz, max freq = {f_max:.1f} Hz")
@@ -108,4 +113,8 @@ if __name__ == "__main__":
 
         formants = find_formants(S, freqs)
         print(f"{label}: formants = {', '.join(f'{f:.1f}Hz' for f in formants)}")
+
+        save_spectrogram(
+            S, freqs, times, f"output/lab10/spec_{label}.png", formants=formants
+        )
         print("-" * 40)
