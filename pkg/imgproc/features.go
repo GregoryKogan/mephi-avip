@@ -78,9 +78,9 @@ func RelativeInertia(img *image.Gray) (float64, float64) {
 func HorizontalProfile(img *image.Gray) []float64 {
 	bounds := img.Bounds()
 	lines := make([]float64, 0, bounds.Dy())
-	for y := range bounds.Max.Y {
+	for y := bounds.Min.Y; y <= bounds.Max.Y; y++ {
 		lineSum := 0.0
-		for x := range bounds.Max.X {
+		for x := bounds.Min.X; x <= bounds.Max.X; x++ {
 			lineSum += float64(img.GrayAt(x, y).Y) / 255.0
 		}
 		lines = append(lines, lineSum)
@@ -92,9 +92,9 @@ func HorizontalProfile(img *image.Gray) []float64 {
 func VerticalProfile(img *image.Gray) []float64 {
 	bounds := img.Bounds()
 	columns := make([]float64, 0, bounds.Dx())
-	for x := range bounds.Max.X {
+	for x := bounds.Min.X; x <= bounds.Max.X; x++ {
 		columnSum := 0.0
-		for y := range bounds.Max.Y {
+		for y := bounds.Min.Y; y <= bounds.Max.Y; y++ {
 			columnSum += float64(img.GrayAt(x, y).Y) / 255.0
 		}
 		columns = append(columns, columnSum)

@@ -172,7 +172,27 @@
 
 <p align="center">
     <img src="assets/iloveyou.png" width="98.5%"/><br />
-    <img src="output/lab6/horizontal.png" width="49%"/>
-    <img src="output/lab6/vertical.png" width="49%"/>
+    <img src="output/lab6/horizontal-line.png" width="49%"/>
+    <img src="output/lab6/vertical-line.png" width="49%"/>
     <img src="output/lab6/segmented.png" width="98.5%"/>
+</p>
+<p align="center">
+    <img src="output/lab6/letter-1.png" height="180em"/>
+    <img src="output/lab6/horizontal-letter-1.png" height="180em"/>
+    <img src="output/lab6/vertical-letter-1.png" height="180em"/>
+</p>
+<p align="center">
+    <img src="output/lab6/letter-2.png" height="180em"/>
+    <img src="output/lab6/horizontal-letter-2.png" height="180em"/>
+    <img src="output/lab6/vertical-letter-2.png" height="180em"/>
+</p>
+<p align="center">
+    <img src="output/lab6/letter-6.png" height="180em"/>
+    <img src="output/lab6/horizontal-letter-6.png" height="180em"/>
+    <img src="output/lab6/vertical-letter-6.png" height="180em"/>
+</p>
+<p align="center">
+    <img src="output/lab6/letter-8.png" height="180em"/>
+    <img src="output/lab6/horizontal-letter-8.png" height="180em"/>
+    <img src="output/lab6/vertical-letter-8.png" height="180em"/>
 </p>
