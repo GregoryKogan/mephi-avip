@@ -48,8 +48,8 @@ func GetColorComponents(img image.Image) (image.Image, image.Image, image.Image)
 
 	var wg sync.WaitGroup
 	wg.Add(bounds.Dx() * bounds.Dy())
-	for x := range bounds.Max.X {
-		for y := range bounds.Max.Y {
+	for x := bounds.Min.X; x < bounds.Max.X; x++ {
+		for y := bounds.Min.Y; y < bounds.Max.Y; y++ {
 			go func() {
 				defer wg.Done()
 				r, g, b := To24bit(img.At(x, y))
@@ -71,8 +71,8 @@ func GetLightness(img image.Image) *image.Gray {
 
 	var wg sync.WaitGroup
 	wg.Add(bounds.Dx() * bounds.Dy())
-	for x := range bounds.Max.X {
-		for y := range bounds.Max.Y {
+	for x := bounds.Min.X; x < bounds.Max.X; x++ {
+		for y := bounds.Min.Y; y < bounds.Max.Y; y++ {
 			go func() {
 				defer wg.Done()
 				hsl := ToHSL(img.At(x, y))
@@ -91,8 +91,8 @@ func GetHalfTone(img image.Image) *image.Gray {
 
 	var wg sync.WaitGroup
 	wg.Add(bounds.Dx() * bounds.Dy())
-	for x := range bounds.Max.X {
-		for y := range bounds.Max.Y {
+	for x := bounds.Min.X; x < bounds.Max.X; x++ {
+		for y := bounds.Min.Y; y < bounds.Max.Y; y++ {
 			go func() {
 				defer wg.Done()
 				r, g, b := ToNormalized(img.At(x, y))
@@ -112,8 +112,8 @@ func InvertColors(img image.Image) image.Image {
 
 	var wg sync.WaitGroup
 	wg.Add(bounds.Dx() * bounds.Dy())
-	for x := range bounds.Max.X {
-		for y := range bounds.Max.Y {
+	for x := bounds.Min.X; x < bounds.Max.X; x++ {
+		for y := bounds.Min.Y; y < bounds.Max.Y; y++ {
 			go func() {
 				defer wg.Done()
 				r, g, b := To24bit(img.At(x, y))
@@ -132,8 +132,8 @@ func FillBackground(img image.Image, fillColor color.Color) image.Image {
 
 	var wg sync.WaitGroup
 	wg.Add(bounds.Dx() * bounds.Dy())
-	for x := range bounds.Max.X {
-		for y := range bounds.Max.Y {
+	for x := bounds.Min.X; x < bounds.Max.X; x++ {
+		for y := bounds.Min.Y; y < bounds.Max.Y; y++ {
 			go func() {
 				defer wg.Done()
 				output.Set(x, y, img.At(x, y))

@@ -14,8 +14,8 @@ func MedianFilter3x3(img *image.Gray, aperture [3][3]int, k int) *image.Gray {
 
 	var wg sync.WaitGroup
 	wg.Add(bounds.Dx() * bounds.Dy())
-	for x := range bounds.Max.X {
-		for y := range bounds.Max.Y {
+	for x := bounds.Min.X; x < bounds.Max.X; x++ {
+		for y := bounds.Min.Y; y < bounds.Max.Y; y++ {
 			go func() {
 				defer wg.Done()
 				processPixelMedianFilter3x3(img, output, aperture, k, x, y)
@@ -37,8 +37,8 @@ func GetDifference(img1, img2 *image.Gray) *image.Gray {
 
 	var wg sync.WaitGroup
 	wg.Add(bounds.Dx() * bounds.Dy())
-	for x := range bounds.Max.X {
-		for y := range bounds.Max.Y {
+	for x := bounds.Min.X; x < bounds.Max.X; x++ {
+		for y := bounds.Min.Y; y < bounds.Max.Y; y++ {
 			go func() {
 				defer wg.Done()
 				diff := math.Abs(float64(img1.GrayAt(x, y).Y - img2.GrayAt(x, y).Y))

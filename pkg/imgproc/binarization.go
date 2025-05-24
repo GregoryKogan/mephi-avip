@@ -13,8 +13,8 @@ func GetNiblackThresholding(img *image.Gray, winSize int, k float64) *image.Gray
 
 	var wg sync.WaitGroup
 	wg.Add(bounds.Dx() * bounds.Dy())
-	for x := range bounds.Max.X {
-		for y := range bounds.Max.Y {
+	for x := bounds.Min.X; x < bounds.Max.X; x++ {
+		for y := bounds.Min.Y; y < bounds.Max.Y; y++ {
 			go func() {
 				defer wg.Done()
 				processPixelNiblack(img, output, k, winSize, x, y)
@@ -33,8 +33,8 @@ func GetThresholding(img *image.Gray, threshold uint8) *image.Gray {
 
 	var wg sync.WaitGroup
 	wg.Add(bounds.Dx() * bounds.Dy())
-	for x := range bounds.Max.X {
-		for y := range bounds.Max.Y {
+	for x := bounds.Min.X; x < bounds.Max.X; x++ {
+		for y := bounds.Min.Y; y < bounds.Max.Y; y++ {
 			go func() {
 				defer wg.Done()
 				if img.GrayAt(x, y).Y > threshold {

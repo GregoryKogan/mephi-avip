@@ -10,29 +10,33 @@ type segment struct {
 }
 
 func SegmentLetters(img *image.Gray) []image.Rectangle {
-	yMin, yMax := verticalBounds(img)
 	xSegments := horizontalSegments(img)
 
 	rectangles := make([]image.Rectangle, 0, len(xSegments))
 	for _, xSeg := range xSegments {
-		r := image.Rect(xSeg.start, yMin, xSeg.end, yMax)
+		minY, maxY := verticalBounds(img, xSeg)
+		r := image.Rect(xSeg.start, minY, xSeg.end, maxY)
 		rectangles = append(rectangles, r)
 	}
 	return rectangles
 }
 
-func verticalBounds(img *image.Gray) (int, int) {
-	horProfile := HorizontalProfile(img)
-	minInd, maxInd := -1, -1
-	for i, v := range horProfile {
-		if v > 0 {
-			if minInd == -1 {
-				minInd = i
+func verticalBounds(img *image.Gray, xSeg segment) (int, int) {
+	bounds := img.Bounds()
+	minY, maxY := -1, -1
+	for y := bounds.Min.Y; y < bounds.Max.Y; y++ {
+		for x := xSeg.start; x < xSeg.end; x++ {
+			f := img.GrayAt(x, y).Y
+			if f == 0 {
+				continue
 			}
-			maxInd = i
+			if minY == -1 {
+				minY = y
+			}
+			maxY = y
 		}
 	}
-	return minInd, maxInd
+	return minY, maxY
 }
 
 func horizontalSegments(img *image.Gray) []segment {
@@ -45,7 +49,7 @@ func horizontalSegments(img *image.Gray) []segment {
 			curSegment.start = i
 		}
 		if v == 0 && curSegment.start != -1 {
-			curSegment.end = i - 1
+			curSegment.end = i
 			segments = append(segments, curSegment)
 			curSegment.start = -1
 		}
@@ -57,8 +61,8 @@ func DrawRectangles(img *image.Gray, rectangles []image.Rectangle) image.Image {
 	bounds := img.Bounds()
 	output := image.NewRGBA(bounds)
 
-	for x := range bounds.Max.X {
-		for y := range bounds.Max.Y {
+	for x := bounds.Min.X; x < bounds.Max.X; x++ {
+		for y := bounds.Min.Y; y < bounds.Max.Y; y++ {
 			f := img.GrayAt(x, y).Y
 			output.Set(x, y, color.RGBA{f, f, f, 255})
 		}

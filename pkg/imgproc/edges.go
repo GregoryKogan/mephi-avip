@@ -16,8 +16,8 @@ func GetScharrEdges(img *image.Gray) (*image.Gray, *image.Gray, *image.Gray) {
 
 	var wg sync.WaitGroup
 	wg.Add(bounds.Dx() * bounds.Dy() * 2)
-	for x := range bounds.Max.X {
-		for y := range bounds.Max.Y {
+	for x := bounds.Min.X; x < bounds.Max.X; x++ {
+		for y := bounds.Min.Y; y < bounds.Max.Y; y++ {
 			index := y*unnormalizedGx.width + x
 			go func() {
 				defer wg.Done()
