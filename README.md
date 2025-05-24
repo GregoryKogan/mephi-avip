@@ -299,3 +299,27 @@
     <img src="output/lab8/histogram-hog-halftone-norm-texture-2.png" width="49%"/>
     <img src="output/lab8/histogram-hog-lightness-norm-texture-2.png" width="49%"/>
 </p>
+
+## Лабораторная работа №9. Анализ шума
+
+[Оригинальное аудио.wav](assets/sample.wav)
+
+### Спектрограмма оригинального сигнала
+
+<p align="center">
+    <img src="output/lab9/spectrogram_original.png" width="98%"/>
+</p>
+
+### Спектрограмма после вычитания шума
+
+<p align="center">
+    <img src="output/lab9/spectrogram_denoised.png" width="98%"/>
+</p>
+
+[Аудио без шума.wav](output/lab9/instrument_denoised.wav)
+
+### Наибольшая энергия
+
+Наибольшая энергия обнаружена в окрестности:  
+  -> Время: 13.70 с  
+  -> Частота: 679.69 Гц  
