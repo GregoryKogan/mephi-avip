@@ -125,3 +125,26 @@ func InvertColors(img image.Image) image.Image {
 	wg.Wait()
 	return output
 }
+
+func FillBackground(img image.Image, fillColor color.Color) image.Image {
+	bounds := img.Bounds()
+	output := image.NewRGBA(bounds)
+
+	var wg sync.WaitGroup
+	wg.Add(bounds.Dx() * bounds.Dy())
+	for x := range bounds.Max.X {
+		for y := range bounds.Max.Y {
+			go func() {
+				defer wg.Done()
+				output.Set(x, y, img.At(x, y))
+				_, _, _, a := img.At(x, y).RGBA()
+				if a == 0 {
+					output.Set(x, y, fillColor)
+				}
+			}()
+		}
+	}
+
+	wg.Wait()
+	return output
+}
