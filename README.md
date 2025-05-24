@@ -152,3 +152,14 @@
     <img src="output/lab5/horDEEL.png" width="49%"/>
     <img src="output/lab5/verDEEL.png" width="49%"/>
 </p>
+
+## Лабораторная работа №6. Сегментация текста
+
+Вариант: Османья
+
+<p align="center">
+    <img src="assets/iloveyou.png" width="98.5%"/><br />
+    <img src="output/lab6/horizontal.png" width="49%"/>
+    <img src="output/lab6/vertical.png" width="49%"/>
+    <img src="output/lab6/segmented.png" width="98.5%"/>
+</p>
