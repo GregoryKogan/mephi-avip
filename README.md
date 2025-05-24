@@ -161,9 +161,9 @@
     <img src="output/lab5/verO.png" width="49%"/>
 </p>
 <p align="center">
-    <img src="assets/osmanya/DEEL.png" width="32%"/><br />
-    <img src="output/lab5/horDEEL.png" width="49%"/>
-    <img src="output/lab5/verDEEL.png" width="49%"/>
+    <img src="assets/osmanya/CAYN.png" width="32%"/><br />
+    <img src="output/lab5/horCAYN.png" width="49%"/>
+    <img src="output/lab5/verCAYN.png" width="49%"/>
 </p>
 
 ## Лабораторная работа №6. Сегментация текста
