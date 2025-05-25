@@ -132,16 +132,16 @@
 Вариант: Оператор Шарра 3 × 3, G=|Gx|+|Gy|
 
 <p align="center">
-    <img src="output/lab4/Gx-cartoon.png" style="max-height: 40vh; width="49%"/>
-    <img src="output/lab4/Gy-cartoon.png" style="max-height: 40vh; width="49%"/>
-    <img src="output/lab4/G-cartoon.png" style="max-height: 40vh; width="49%"/>
-    <img src="output/lab4/Bin-cartoon.png" style="max-height: 40vh; width="49%"/>
+    <img src="output/lab4/Gx-cartoon.png" style="max-height: 40vh" width=49% />
+    <img src="output/lab4/Gy-cartoon.png" style="max-height: 40vh" width=49% />
+    <img src="output/lab4/G-cartoon.png" style="max-height: 40vh" width=49% />
+    <img src="output/lab4/Bin-cartoon.png" style="max-height: 40vh" width=49% />
 </p>
 <p align="center">
-    <img src="output/lab4/Gx-page.png" style="max-height: 40vh; width="49%"/>
-    <img src="output/lab4/Gy-page.png" style="max-height: 40vh; width="49%"/>
-    <img src="output/lab4/G-page.png" style="max-height: 40vh; width="49%"/>
-    <img src="output/lab4/Bin-page.png" style="max-height: 40vh; width="49%"/>
+    <img src="output/lab4/Gx-page.png" style="max-height: 40vh" height=500em />
+    <img src="output/lab4/Gy-page.png" style="max-height: 40vh" height=500em /><br />
+    <img src="output/lab4/G-page.png" style="max-height: 40vh" height=500em />
+    <img src="output/lab4/Bin-page.png" style="max-height: 40vh" height=500em />
 </p>
 
 ## Лабораторная работа №5. Выделение признаков символов
@@ -185,18 +185,18 @@
 
 <p align="center">
     <img src="assets/osmanya/KAAF.png" style="max-height: 30vh; width="32%"/><br />
-    <img src="output/lab5/horKAAF.png" style="max-height: 40vh; width="49%"/>
-    <img src="output/lab5/verKAAF.png" style="max-height: 40vh; width="49%"/>
+    <img src="output/lab5/horKAAF.png" style="max-height: 40vh" width=49% />
+    <img src="output/lab5/verKAAF.png" style="max-height: 40vh" width=49% />
 </p>
 <p align="center">
-    <img src="assets/osmanya/O.png" style="max-height: 30vh; width="32%"/><br />
-    <img src="output/lab5/horO.png" style="max-height: 40vh; width="49%"/>
-    <img src="output/lab5/verO.png" style="max-height: 40vh; width="49%"/>
+    <img src="assets/osmanya/O.png" style="max-height: 30vh; width="32%" /><br />
+    <img src="output/lab5/horO.png" style="max-height: 40vh" width=49% />
+    <img src="output/lab5/verO.png" style="max-height: 40vh" width=49% />
 </p>
 <p align="center">
     <img src="assets/osmanya/CAYN.png" style="max-height: 30vh; width="32%"/><br />
-    <img src="output/lab5/horCAYN.png" style="max-height: 40vh; width="49%"/>
-    <img src="output/lab5/verCAYN.png" style="max-height: 40vh; width="49%"/>
+    <img src="output/lab5/horCAYN.png" style="max-height: 40vh" width=49% />
+    <img src="output/lab5/verCAYN.png" style="max-height: 40vh" width=49% />
 </p>
 
 ## Лабораторная работа №6. Сегментация текста
@@ -299,17 +299,17 @@
 </p>
 Гистограммы яркости исходного и контрастированного изображений
 <p align="center">
-    <img src="output/lab8/histogram-halftone-texture-1.png" style="max-height: 40vh; width="49%"/>
-    <img src="output/lab8/histogram-lightness-texture-1.png" style="max-height: 40vh; width="49%"/>
+    <img src="output/lab8/histogram-halftone-texture-1.png" style="max-height: 40vh" width="49%"/>
+    <img src="output/lab8/histogram-lightness-texture-1.png" style="max-height: 40vh" width="49%"/>
 </p>
 Матрицы для исходного и контрастированного изображений
 <p align="center">
-    <img src="output/lab8/histogram-hog-halftone-texture-1.png" style="max-height: 40vh; width="49%"/>
-    <img src="output/lab8/histogram-hog-lightness-texture-1.png" style="max-height: 40vh; width="49%"/>
+    <img src="output/lab8/histogram-hog-halftone-texture-1.png" style="max-height: 40vh" width="49%"/>
+    <img src="output/lab8/histogram-hog-lightness-texture-1.png" style="max-height: 40vh" width="49%"/>
 </p>
 <p align="center">
-    <img src="output/lab8/histogram-hog-halftone-norm-texture-1.png" style="max-height: 40vh; width="49%"/>
-    <img src="output/lab8/histogram-hog-lightness-norm-texture-1.png" style="max-height: 40vh; width="49%"/>
+    <img src="output/lab8/histogram-hog-halftone-norm-texture-1.png" style="max-height: 40vh" width="49%"/>
+    <img src="output/lab8/histogram-hog-lightness-norm-texture-1.png" style="max-height: 40vh" width="49%"/>
 </p>
 
 ### Текстура 2
@@ -322,17 +322,17 @@
 </p>
 Гистограммы яркости исходного и контрастированного изображений
 <p align="center">
-    <img src="output/lab8/histogram-halftone-texture-2.png" style="max-height: 40vh; width="49%"/>
-    <img src="output/lab8/histogram-lightness-texture-2.png" style="max-height: 40vh; width="49%"/>
+    <img src="output/lab8/histogram-halftone-texture-2.png" style="max-height: 40vh" width="49%"/>
+    <img src="output/lab8/histogram-lightness-texture-2.png" style="max-height: 40vh" width="49%"/>
 </p>
 Матрицы для исходного и контрастированного изображений
 <p align="center">
-    <img src="output/lab8/histogram-hog-halftone-texture-2.png"style="max-height: 40vh; width="49%"/>
-    <img src="output/lab8/histogram-hog-lightness-texture-2.png" style="max-height: 40vh; width="49%"/>
+    <img src="output/lab8/histogram-hog-halftone-texture-2.png"style="max-height: 40vh" width="49%"/>
+    <img src="output/lab8/histogram-hog-lightness-texture-2.png" style="max-height: 40vh" width="49%"/>
 </p>
 <p align="center">
-    <img src="output/lab8/histogram-hog-halftone-norm-texture-2.png" style="max-height: 40vh; width="49%"/>
-    <img src="output/lab8/histogram-hog-lightness-norm-texture-2.png" style="max-height: 40vh; width="49%"/>
+    <img src="output/lab8/histogram-hog-halftone-norm-texture-2.png" style="max-height: 40vh" width="49%"/>
+    <img src="output/lab8/histogram-hog-lightness-norm-texture-2.png" style="max-height: 40vh" width="49%"/>
 </p>
 
 ## Лабораторная работа №9. Анализ шума
@@ -342,7 +342,7 @@
 ### Спектрограмма оригинального сигнала
 
 <p align="center">
-    <img src="output/lab9/original_spectrogram.png" style="max-height: 50vh; width="98%"/>
+    <img src="output/lab9/original_spectrogram.png" style="max-height: 50vh" width="80%"/>
 </p>
 
 ### Спектрограмма после вычитания шума
@@ -350,19 +350,19 @@
 #### Метод Винера
 
 <p align="center">
-    <img src="output/lab9/denoised_wiener_spectrogram.png" style="max-height: 50vh; width="98%"/>
+    <img src="output/lab9/denoised_wiener_spectrogram.png" style="max-height: 50vh" width="80%"/>
 </p>
 
 #### Фильтр Савицкого-Голея
 
 <p align="center">
-    <img src="output/lab9/denoised_savgol_spectrogram.png" style="max-height: 50vh; width="98%"/>
+    <img src="output/lab9/denoised_savgol_spectrogram.png" style="max-height: 50vh" width="80%"/>
 </p>
 
 #### Фильтр низких частот
 
 <p align="center">
-    <img src="output/lab9/denoised_lowpass_spectrogram.png" style="max-height: 50vh; width="98%"/>
+    <img src="output/lab9/denoised_lowpass_spectrogram.png" style="max-height: 50vh" width="80%"/>
 </p>
 
 [Аудио без шума.wav](output/lab9/restored.wav)
@@ -370,7 +370,7 @@
 ### Энергетические пики
 
 <p align="center">
-    <img src="output/lab9/energy_peaks.png" style="max-height: 50vh; width="98%"/>
+    <img src="output/lab9/energy_peaks.png" style="max-height: 50vh" width="80%"/>
 </p>
 
 ## Лабораторная работа №10. Обработка голоса
@@ -380,7 +380,7 @@
 [А.wav](assets/A.wav)
 
 <p align="center">
-    <img src="output/lab10/spec_A.png" style="max-height: 50vh; width="98%"/>
+    <img src="output/lab10/spec_A.png" style="max-height: 50vh" width="80%"/>
 </p>
 
 Минимальная частота: 0.0Hz  
@@ -397,7 +397,7 @@
 [И.wav](assets/I.wav)
 
 <p align="center">
-    <img src="output/lab10/spec_I.png" style="max-height: 50vh; width="98%"/>
+    <img src="output/lab10/spec_I.png" style="max-height: 50vh" width="80%"/>
 </p>
 
 Минимальная частота: 0.0Hz  
@@ -414,7 +414,7 @@
 [Лай.wav](assets/Bark.wav)
 
 <p align="center">
-    <img src="output/lab10/spec_Bark.png" style="max-height: 50vh; width="98%"/>
+    <img src="output/lab10/spec_Bark.png" style="max-height: 50vh" width="80%"/>
 </p>
 
 Минимальная частота: 0.0Hz  
